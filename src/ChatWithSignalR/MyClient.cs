@@ -12,7 +12,7 @@ namespace ChatWithSignalR
         public MyClient()
         {
             StartConnectionAsync().Wait();
-            InitChat().Wait();
+            InitChatAsync().Wait();
             ChatingAsync().Wait();
         }
 
@@ -41,7 +41,7 @@ namespace ChatWithSignalR
             };
         }
 
-        private Task InitChat()
+        private Task InitChatAsync()
         {
             user = string.Empty;
             while (string.IsNullOrWhiteSpace(user))
